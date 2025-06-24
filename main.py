@@ -28,9 +28,3 @@ def home(request: Request):
     context = {"request": request, "name": "Alijon"}
     return templates.TemplateResponse("index.html", context)
 
-
-@app.get("/about", response_class=HTMLResponse)
-def home(request: Request):
-    context = {"request": request, "about": "Karatash neighbourhood"}
-    return templates.TemplateResponse("about.html", context)
-
