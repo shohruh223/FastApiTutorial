@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Foydalanuvchini tahrirlash</title></head>
+<body>
+    <h2>Tahrirlash: {{ user.name }}</h2>
+    <form action="/update/{{ user.id }}" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" value="{{ user.name }}" required><br>
+        <input type="email" name="email" value="{{ user.email }}" required><br>
+        <input type="file" name="image" accept="image/*"><br>
+        <button type="submit">Yangilash</button>
+    </form>
+</body>
+</html>
