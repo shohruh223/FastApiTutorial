@@ -5,7 +5,7 @@ from fastapi.templating import Jinja2Templates
 from .database import Base, engine
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="app/templates")
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 Base.metadata.create_all(bind=engine)
 
